@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+body,html {
+	
+}
+
+#wrap {
+	width: 1005px;
+	height: 1405px;
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.head {
+	width: 1000px;
+	height: 250px;
+	background-image:
+		url('http://image.moshimo.com/static/publish/sd/img/backgrounds/000/010.gif');
+	background-color: #ffff00;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	position: relative;
+	border: 1px solid black;
+}
+
+.label {
+	position: absolute;
+	top: 80px;
+	right: 30px;
+}
+
+.menu {
+	margin-bottom: 30px;
+	font-size: 16px;
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+}
+
+.menu>li {
+	float: left;
+	width: 150px;
+	text-align: center;
+}
+
+.menu a {
+	padding: 10px 0;
+	color: blue;
+	display: block;
+}
+
+.menu a:hover {
+	background: #ffc35c;
+}
+
+.side {
+	text-align: center;
+	width: 200px;
+	height: 700px;
+	float: left;
+	background-image:
+		url('http://image.moshimo.com/static/publish/sd/img/backgrounds/000/010.gif');
+	background-color: #ffff00;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+}
+
+.main {
+	width: 800px;
+	height: 700px;
+	float: left;
+	border: 1px solid black;
+}
+.navi {
+	margin-bottom: 20px;
+	font-size: 12px;
+	overflow: hidden;
+	padding: 10px,0;
+	border: 1px solid black;
+}
+p.next{
+	float:rigth;
+	align:center;
+}
+
+p.back {
+	float: left;
+	align:center;
+}
+
+p.clearfix {
+	float: left;
+	margin: 30px 50px;
+}
+
+#itemInfo {
+	margin: 50px 30px;
+}
+
+.footer {
+	width: 750px;
+	height: 100px;
+	clear: both;
+}

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_3_0.xsd"
+	version="3.0">
+
+
+	<session-config>
+  	<session-timeout>15</session-timeout>
+  </session-config>
+  
+    <servlet>
+      <servlet-name>s0</servlet-name>
+      <servlet-class>login.Signin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>s0</servlet-name>
+        <url-pattern>/Signin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>s1</servlet-name>
+      <servlet-class>login.Checkuser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>s1</servlet-name>
+        <url-pattern>/Checkuser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>s2</servlet-name>
+      <servlet-class>login.Signout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>s2</servlet-name>
+        <url-pattern>/Signout</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+		<servlet-name>Summary</servlet-name>
+		<servlet-class>login.Summary</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Summary</servlet-name>
+		<url-pattern>/Summary</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Detail</servlet-name>
+		<servlet-class>test.Detail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Detail</servlet-name>
+		<url-pattern>/Detail</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Search</servlet-name>
+		<servlet-class>test.Search</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Search</servlet-name>
+		<url-pattern>/Search</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>test</servlet-name>
+		<servlet-class>test.SearchCategory</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/SearchCategory</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>test2</servlet-name>
+		<servlet-class>test.Sitem</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>test2</servlet-name>
+		<url-pattern>/Sitem</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>test3</servlet-name>
+		<servlet-class>test.SelectServlet2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>test3</servlet-name>
+		<url-pattern>/SelectServlet2</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>test4</servlet-name>
+		<servlet-class>action.Test</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>test4</servlet-name>
+		<url-pattern>/Test</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>test5</servlet-name>
+		<servlet-class>action.Test2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>test5</servlet-name>
+		<url-pattern>/Test2</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>test6</servlet-name>
+		<servlet-class>action.Test3</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>test6</servlet-name>
+		<url-pattern>/Test3</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Insert</servlet-name>
+		<servlet-class>action.Insert</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Insert</servlet-name>
+		<url-pattern>/Insert</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Insert2</servlet-name>
+		<servlet-class>action.Insert2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Insert2</servlet-name>
+		<url-pattern>/Insert2</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DL</servlet-name>
+		<servlet-class>action.DbDelete</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DL</servlet-name>
+		<url-pattern>/DbDelete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShoppingCart</servlet-name>
+		<servlet-class>cart.ShoppingCart</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShoppingCart</servlet-name>
+		<url-pattern>/ShoppingCart</url-pattern>
+	</servlet-mapping>
+	
+<!-- 	<jsp-config> -->
+<!-- 		<jsp-property-group> -->
+<!-- 			<url-pattern>/Index/index2.jsp</url-pattern> -->
+<!-- 			<page-encoding>UTF-8</page-encoding> -->
+<!-- 			<include-prelude>/common/head.jsp</include-prelude> -->
+<!-- 		</jsp-property-group> -->
+<!-- 	</jsp-config> -->
+
+	<servlet>
+		<servlet-name>MainController</servlet-name>
+		<servlet-class>cart.MainController</servlet-class>
+<!-- 		<load-on-startup>1</load-on-startup> -->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MainController</servlet-name>
+		<url-pattern>/MainController</url-pattern>
+	</servlet-mapping>
+	
+			<error-page>
+<!-- 			<error-code>500</error-code>  -->
+				<exception-type>java.lang.Exception</exception-type>
+				<location>/ErrorServlet</location>
+			</error-page>
+			
+			
+	<servlet>
+		<servlet-name>InsertMember</servlet-name>
+		<servlet-class>action.InsertMember</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertMember</servlet-name>
+		<url-pattern>/InsertMember</url-pattern>
+	</servlet-mapping>
+
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>ErrorServlet</servlet-name> -->
+<!-- 		<servlet-class>error.ErrorServlet</servlet-class> -->
+<!-- 	</servlet> -->
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>ErrorServlet</servlet-name> -->
+<!-- 		<url-pattern>/ErrorServlet</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+	
+	
+	
+<!-- mail -->
+	<context-param>												
+		<param-name>smtp.host</param-name>
+		<param-value>smtp.gmail.com</param-value>		
+	</context-param>
+
+	<context-param>
+		<param-name>smtp.host2</param-name>
+		<param-value>smtp.vcangel.ocn.ne.jp</param-value>	
+	</context-param>
+	
+	
+	
+    <servlet>
+      <servlet-name>SvMail</servlet-name>
+      <servlet-class>cart.SvMail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SvMail</servlet-name>
+        <url-pattern>/SvMail</url-pattern>
+    </servlet-mapping>
+    
+<!--     <filter> -->
+<!--     <filter-name>cashfilter</filter-name> -->
+<!--     <filter-class>test.CashFilter</filter-class> -->
+<!--   </filter> -->
+<!--   <filter-mapping> -->
+<!--     <filter-name>cashfilter</filter-name> -->
+<!--     <url-pattern>/*</url-pattern> -->
+<!--   </filter-mapping> -->
+
+  <!--  SCRIPT の制御テストするフィルタとテストクラス -->
+
+  <filter>
+    <filter-name>CSRF</filter-name>
+    <filter-class>filter.CSRF_Filter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CSRF</filter-name>
+    <url-pattern>/SvMail</url-pattern>
+    <url-pattern>/pay.jsp</url-pattern>
+  </filter-mapping>
+    
+</web-app>

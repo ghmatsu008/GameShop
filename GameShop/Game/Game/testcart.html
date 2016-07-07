@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"/>
+	
+	  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	  <link rel="stylesheet" href="/resources/demos/style.css"/>	
+	<title>Delete</title>
+</head>
+<body>
+<!-- 
+松尾さんからいただいたソースを元に
+hidden属性の値を javascript で取得するプログラムを作ります。
+また、重複したidを訂正したりします。
+
+ 
+ -->
+<script type="text/javascript">
+$(function(){
+	
+		$('#pro .sub [name="b"]').click(function(){
+			
+			// 何番目かを取得 0から
+			var index = $('#pro .sub [name="b"]').index( this );
+			
+			var code;
+			var code2;
+			
+
+			var code2 = $('#pro .sub [name="index"]').eq(index).attr('value');
+			
+			var code  =$('input:hidden[name="action"]' ).eq(index).attr('value');
+
+
+			// debug
+			alert( "("+index+")番目　 code2=["+code2 + "] , code=[" +code+"]" );
+			
+			/*
+			 if (!confirm('登録内容を保存します\nよろしいですか？')) {
+			        return false;
+			    }
+			*/
+			
+// 			if(dat1.length <= 0){
+// 				input_error_num();
+// 				return false;
+// 			}
+// 			if(dat2.length <= 0){
+// 				input_error_name();
+// 				return false;
+// 			}
+// 			var data = { "dat1" : dat1, "dat2" : dat2};
+			var data = { "dat1" : code, "dat2" : code2SS};
+
+
+
+/*
+				var url = "MainController";
+				$.ajax({
+					type: 'POST',
+					url: url,
+					data: data,
+					dataType: 'html',
+					cache: false,
+					success: function(data, textStatus){
+						$('#div1').html(data);
+						$('#div1').show("slow");
+					},
+					error: function(xhr, textStatus, errorThrown){
+						alert('Error!' + textStatus + '' + errorThrown);
+					
+					}
+					
+				});
+*/
+
+	});
+		
+});		
+			
+</script>
+
+	<h3>GameShop  &nbsp; カートBox</h3>
+		<A HREF="sellerTop.jsp">TOP</A>
+	<br>
+	<hr>
+	
+<p>商品一覧</p>
+		<div id="pro" >
+		<table align="center">
+			
+				
+				
+				
+			<tr valign="top">
+				<td align="center">
+				<table border="1">
+					<th width="80" colspan="2">商品名</th>
+					<th width="60" colspan="2">価格</th>
+					
+					<tr>			
+						<td><input type="checkbox" name="delete_id"/></td>
+						<td>MASS EFFECT 3(輸入版)</td>
+						<td>1570</td>
+						
+						<td>
+						<form class="sub">
+
+							<input type="hidden" name="action" value="remove">
+							<input type="hidden" name="index" value="0">
+							<input  name="b" type="button" value="削除">
+						</form></td>
+					</tr>
+					
+					<tr>			
+						<td><input type="checkbox" name="delete_id"/></td>
+						<td>Dragon Age Origins Awakening (輸入版:北米・アジア)</td>
+						<td>1450</td>
+						
+						<td>
+						<form class="sub">
+
+							<input type="hidden" name="action" value="remove">
+							<input type="hidden" name="index" value="1">
+							<input    name="b" type="button" value="削除">
+						</form></td>
+					</tr>
+					
+					<tr>			
+						<td><input type="checkbox" name="delete_id"/></td>
+						<td>Dragon Age Origins Awakening (輸入版:北米・アジア)</td>
+						<td>1450</td>
+						
+						<td>
+						<form class="sub">
+
+							<input type="hidden" name="action" value="remove">
+							<input type="hidden" name="index" value="2">
+							<input   name="b"  type="button" value="削除">
+						</form></td>
+					</tr>
+					
+					<tr>			
+						<td><input type="checkbox" name="delete_id"/></td>
+						<td>Dragon Age Origins Awakening (輸入版:北米・アジア)</td>
+						<td>1450</td>
+						
+						<td>
+						<form class="sub">
+
+							<input type="hidden" name="action" value="い">
+							<input type="hidden" name="index" value="3">
+							<input   name="b"  type="button" value="削除">
+						</form></td>
+					</tr>
+					
+					<tr>			
+						<td><input type="checkbox" name="delete_id"/></td>
+						<td>Dragon Age Origins Awakening (輸入版:北米・アジア)</td>
+						<td>1450</td>
+						
+						<td>
+						<form class="sub">
+
+							<input type="hidden" name="action" value="あ">
+							<input type="hidden" name="index" value="4">
+							<input   name="b"  type="button" value="削除">
+						</form>
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="4" align="right" color="red" ><B>
+							合計5個　￥7370</B></td>
+					</tr>
+					</table>
+				</td>
+				</tr>
+				<tr>
+					<td align="center"><a href="#">購入する</a></td>
+				</tr>
+				
+				
+					<tr>
+						<td align="center"><a href="#">TOPへ戻る</a></td>
+					</tr>
+		</table>
+		</div>
+	<p>
+		<input type="submit" name="delete" value="チェックした商品を削除" />
+	</p>
+
+
+
+</body>
+</html>
+
